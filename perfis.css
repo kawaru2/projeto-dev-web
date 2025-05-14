@@ -1,0 +1,55 @@
+:root {
+  --cor-azul-escuro: #070A48;
+  --cor-azul-claro: #5D46F0;
+  --cor-vermelho: #F05A46;
+  --cor-fundo-cartao: #BBBBBB;
+}
+
+.perfis_pri {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  list-style: none;
+}
+
+.opcao_perf_pri {
+  width: 35%;
+  padding: 15px 30px;
+  background-color: var(--cor-fundo-cartao);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.cartao_inicio_pri {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0;
+  align-items: center;
+}
+
+.nome {
+  max-width: 200px;
+  margin-left: 100px;
+}
+
+.linha {
+  margin: 20px auto;
+}
+
+.hobby {
+  margin-bottom: 10px;
+}
+
+.lista_dados_perfil {
+  display: flex;
+  justify-content: space-around;
+}
+
+.opcao_lista_dados_perfil {
+  max-width: 35%;
+}
+
+.preferencias {
+  max-width: 100%;
+}
