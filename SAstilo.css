@@ -1,0 +1,264 @@
+:root {
+    --cor-azul-escuro: #070A48;
+    --cor-azul-claro: #5D46F0;
+    --cor-vermelho: #F05A46;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #DDDDDD;
+    font-family: 'Montserrat', sans-serif;
+}
+#cabecalho{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    text-align: center;
+    background-color: var(--cor-azul-escuro);
+    padding: 30px 0;
+    border-radius: 0 0 10px 10px;
+    color: white;
+}
+#ladoEsquerdo{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.links_header {
+    display: flex;
+    width: 20vw;
+    justify-content: space-around;
+    margin-right: 100px;
+    padding: 20px 10px;
+    border-radius: 10px;
+
+    background-color: white;
+    list-style: none;
+}
+
+/*#ladoInicial{ ???
+    width: 50px;
+    height: 50px;
+    background-color: white; 
+    border-radius: 8px;
+}*/
+
+/* .links_inicio {
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.links_inicio:hover {
+    border-bottom: 2px solid var(--cor-azul-escuro);
+} */
+
+.links_inicio > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor-azul-escuro);
+    font-size: 1.2rem;
+    transition: ease all 0.1s;
+}
+
+.links_inicio > a:hover {
+    border-bottom: 3px solid var(--cor-azul-claro);
+    padding-bottom: 5px;
+    color: var(--cor-azul-claro);
+}
+
+#siglasDoSite{
+    color: rgb(234, 234, 242);
+    font-size: 1.8rem;
+}
+
+#nome_site {
+    font-size: 1.1rem;
+}
+
+#apresentacao{
+    color:var(--cor-azul-escuro);
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+    margin-top: 100px;
+    
+}
+#compartilhe{
+    width: 70%;
+    color: var(--cor-azul-escuro);
+    text-align: center;
+    font-size: 30px;
+    margin: 100px auto 150px auto;
+    font-size: 2.2rem;
+}
+
+#conheça_perfil{
+    color: rgb(247, 247, 247);
+    text-align: center;
+    background-color:var(--cor-azul-escuro);
+    border-radius: 10px;
+    width: 50%;
+    margin: 0px auto;
+    padding: 30px 10px;
+    font-size: 32px;
+}
+#perfis{
+    display: flex;
+    list-style: none;
+    justify-content: space-around; 
+    margin: 170px 0;
+}
+.linha{ 
+    width: 70%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: rgb(0,0,0,0.5);
+    margin-bottom: 100px;
+}
+.opcaoListaPerfil{
+    background-color: #bbbbbb;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    box-shadow: 7px 7px 12px rgb(0,0,0,0.5);
+    min-width: 300px;
+    max-width: 380px;
+    transition: all 0.3s;
+}
+
+.opcaoListaPerfil:hover {
+    transform: scale(1.1);
+}
+
+.inicioCartao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.foto_usuario{
+    border-radius: 50%;
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.nome{
+    max-width: 105px;
+    margin-right: 20px;
+    background-color: #d5cfe1;
+    border-radius: 10px;
+    padding: 8px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 1px 1px 4px rgb(0,0,0,0.5); /* colocar a sombra */
+}
+
+.pronomes_e_idades {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    font-weight: bold;
+    color: #5d46f0;
+}
+
+.informaçoes{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    background-color: #d5cfe1;
+}
+
+.listaInformacoes{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.hobby{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.resposta_hobby{ 
+    font-size:1.1rem;
+    margin-left: 25px;
+    color: #5d46f0;
+    font-weight: bold;
+
+}
+
+.gostos_e_desgostos, .preferencias {
+    font-weight: bold;
+}
+
+.preferencias{
+    color: #5d46f0;
+    max-width: 80%;
+
+}
+
+#rodape > nav {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+
+    margin: 120px auto;
+    padding: 60px 0;
+    background-color: var(--cor-azul-escuro);
+    border-radius: 20px;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+}
+
+.visite {
+    cursor: default;
+}
+
+.links_fim {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.links_fim > li > a {
+    color: white;
+    text-decoration: none;
+    transition: ease all 0.1s;
+    padding: 5px;
+}
+
+.links_fim > li > a:hover {
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
+}
+
+#direitos_reservados { 
+    background-color: var(--cor-azul-escuro);
+    color:white;
+    font-size: 1.3rem;
+    padding: 50px;
+    text-align: center;
+}
+  
