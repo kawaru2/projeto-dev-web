@@ -1,0 +1,11 @@
+.destaque_conteudo_principal {
+  width: 50%;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: var(--cor-azul-escuro);
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
