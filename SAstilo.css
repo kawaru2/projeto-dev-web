@@ -35,6 +35,14 @@ body{
     margin-left: 50px;
 }
 
+#logoInicial {
+    width: 90px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
 .links_header {
     display: flex;
     width: 20vw;

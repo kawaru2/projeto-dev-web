@@ -7,14 +7,18 @@
 
 .perfis_pri {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
   gap: 100px;
   list-style: none;
 }
 
 .opcao_perf_pri {
-  width: 35%;
+  width: 30%;
+  min-width: 570px;
+  max-width: 670px;
   padding: 15px 30px;
   background-color: var(--cor-fundo-cartao);
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
