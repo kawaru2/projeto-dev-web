@@ -19,6 +19,7 @@
     background-color:var(--cor-azul-escuro);
     text-align: center;
     margin-top: 30px;
+    /* para centralizar = margin: auto; */
     margin-left:10px;
     margin-right: 10px;
     padding: 20px ;
