@@ -47,10 +47,16 @@
     </ul>
     <p class="redes">REDES SOCIAS</p>
     <ul class="redes_sociais">
-     <li>
+     <li> <!-- aplica um display flex com flex direction column -->
       <p class="nome_rede">Higor Palheta</p>
-      <a href="#"><img src="insta_img" class="icon_pequeno"></a>
-      <a href="#"><img src="linkedin_img" class="icon_pequeno"></a>
+      <div class="link_rede"> <!-- aplica um display flex com flex direction column -->
+        <a href="#"><img src="insta_img" class="icon_pequeno"> <p>Instagram</p></a> <!-- aplica um display flex na tag <a>. ficaria ".link_rede > a" -->
+          <!-- CSS = .link_rede > a {
+           display: flex;
+           gap: 10px ( exemplo )
+           } -->
+        <a href="#"><img src="linkedin_img" class="icon_pequeno"><p>Linkedin</p></a>
+      </div>
      </li>
      <li>
       <p class="nome_rede">João Barros</p>
