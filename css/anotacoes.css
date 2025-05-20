@@ -1,0 +1,122 @@
+:root {
+    --cor-azul-escuro: #070A48;
+    --cor-azul-claro: #5D46F0;
+    --cor-vermelho: #F05A46;
+    --cor-fundo-cartao: #BBBBBB;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.sobre_site{
+    color: white;
+    background-color:var(--cor-azul-escuro);
+    text-align: center;
+    margin-top: 30px;
+    /* para centralizar = margin: auto; */
+    margin-left:10px;
+    margin-right: 10px;
+    padding: 20px ;
+    border-radius: 5px;  
+
+}
+
+.informaçoes_do_trabalho{ 
+    margin-left: 20%;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 5%;
+
+}
+
+
+    
+.tecnologias{
+    margin-top: 10%;
+    color: var(--cor-azul-escuro);
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.imagens{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 30px;
+    margin-right: 10px;
+    
+}
+
+#prog_utili{
+    color: var(--cor-azul-escuro);
+    margin-top: 4px;
+    display: flex;
+	font-size: 50px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+     margin-left: 0px;
+     margin-right: 50px;
+    
+
+    
+
+}
+.redes{
+    color:black;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.redes_sociais{
+    margin-top: 50px;
+    background-color: var(--cor-fundo-cartao);
+    text-align: center;
+    margin-left: 90px;
+    margin-right: 70px;
+    border-radius: 5px;
+    padding-top: 10px;
+    
+}
+
+.linha_hori{
+    padding-top: 0%;
+    margin-right: 80%;
+    margin-bottom: 180px;
+    height: 200px;
+    border-right: 2px solid rgb(12, 12, 12);
+    text-align: center;
+    
+
+
+
+}
+
+.nome_rede{
+    text-align: center;
+    margin-right: 70%;
+    margin-top: 30px;
+    text-align: 0px;
+     justify-content: space-around;
+     display: flex;
+     flex-direction: row;
+    
+}
+
+.icon_pequeno{
+    text-align: center;
+    margin-top: 60px;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 30px;
+    
+}
+
