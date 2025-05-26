@@ -78,9 +78,11 @@
   border-radius: 10px;
   background-color: var(--cor-azul-claro);
   color: white;
+  transition: all ease .1s;
   cursor: pointer;
 }
 
 .btn:hover {
   background-color: var(--cor-azul-escuro);
+  transform: scale(1.1);
 }

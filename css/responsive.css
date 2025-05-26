@@ -1,0 +1,87 @@
+@media (max-width: 1024px) {
+  #apresentacao {
+    width: 90%;
+    margin: 100px auto 0 auto;
+    font-size: 2.4rem;
+  }
+
+  #compartilhe {
+    width: 80%;
+    font-size: 1.8rem;
+  }
+
+  #conheça_perfil {
+    width: 90%;
+  }
+
+  #perfis {
+    gap: 70px;
+  }
+
+  .opcaoListaPerfil {
+    min-width: 350px;
+  }
+
+  #rodape > nav {
+    width: 60%;
+  }
+
+  .linha {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  #apresentacao {
+    width: 90%;
+    font-size: 1.8rem;
+  }
+
+  #compartilhe {
+    width: 80%;
+    font-size: 1.6rem;
+    margin: 80px auto 120px auto;
+  }
+
+  #conheça_perfil {
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  #perfis {
+    margin: 140px 0;
+  }
+
+  .opcaoListaPerfil {
+    min-width: 430px;
+    max-width: none;
+    padding: 50px 15px;
+  }
+
+  #cabecalho {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #ladoEsquerdo {
+    margin-right: 200px;
+  }
+
+  .links_header {
+    display: none;
+  }
+
+  #menu_burguer {
+    display: flex;
+    width: 60px;
+    flex-direction: column;
+    gap: 13px;
+    margin-right: 50px;
+  }
+
+  /* FALTA EU ADAPTAR OS CARTÕES E ORGANIZAR O CSS DE ACORDO COM O HTML. */
+
+  #rodape > nav {
+    width: 70%;
+  }
+}
