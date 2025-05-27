@@ -85,3 +85,54 @@
     width: 70%;
   }
 }
+
+@media (max-width: 425px) {
+  #menu_burguer {
+    width: 40px;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .linha_burguer {
+    height: 3px;
+  }
+
+  #ladoEsquerdo {
+    margin: 0;
+  }
+
+  #logoInicial {
+    width: 50px;
+    height: 40px;
+  }
+
+  #siglasDoSite {
+    font-size: 1rem;
+  }
+
+  #nome_site {
+    font-size: .7rem;
+  }
+
+  .opcaoListaPerfil {
+    min-width: 330px;
+  }
+
+  #apresentacao {
+    font-size: 1.6rem;
+  }
+
+  #compartilhe {
+    font-size: 1.4rem;
+  }
+
+  #conheça_perfil {
+    width: 90%;
+    border-radius: 20px;
+    font-size: 23px;
+  }
+
+  #rodape > nav {
+    width: 90%;
+  }
+}
