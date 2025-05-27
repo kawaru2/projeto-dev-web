@@ -86,7 +86,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   #menu_burguer {
     width: 40px;
     gap: 8px;
@@ -135,4 +135,8 @@
   #rodape > nav {
     width: 90%;
   }
+}
+
+@media (max-width: 375px) {
+
 }
