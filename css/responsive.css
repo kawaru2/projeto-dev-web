@@ -32,6 +32,10 @@
 }
 
 @media (max-width: 768px) {
+  .cabecalho {
+    border-radius: 0;
+  }
+  
   #apresentacao {
     width: 90%;
     font-size: 1.8rem;
@@ -58,7 +62,7 @@
     padding: 50px 15px;
   }
 
-  #cabecalho {
+  .cabecalho {
     justify-content: space-around;
     align-items: center;
   }
