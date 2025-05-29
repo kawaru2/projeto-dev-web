@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sala de Estárcio</title>
+  <link rel="stylesheet" href="../css/SAstilo.css">
+  <link rel="stylesheet" href="../css/criar_editar_perfil.css">
+</head>
+<body>
+  <h1 id="editar_perfil">Edite seu perfil</h1>
+  <section>
+    <h2>Dados e informações</h2>
+    <div id="dados_perfil">
+      <label for="nameCreate">Nome: <input type="text" name="nameCreate" id="nameCreate" placeholder="Jorge Carvalho"></label>
+      <label for="hobbyCreate">Seu hobby: <input type="text" name="hobbyCreate" id="hobbyCreate" placeholder="Ex: Trilha"></label>
+      <div id="sexo_ident">
+        <label for="idade">Sua idade: <input type="number" name="idade" id="idade" placeholder="Ex: 23"></label>
+        <h2>Sexo:</h2>
+        <input type="radio" name="sexo" id="masculino" value="masculino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="sexo" id="feminino" value="feminino">
+        <label for="feminino">Feminino</label>
+        <input type="radio" name="sexo" id="outro" value="outro">
+        <label for="outro">Outro</label>
+      </div>
+      <div id="informacoes">
+        <p>Gostos: <input type="text" name="gosto" id="gosto" placeholder="Festas, Praia, Esporte..."> <button id="gosto">adicionar</button></p>
+        <p>Não gosto: <input type="text" name="nao_gosto" id="nao_gosto" placeholder="Livros, Frio, Videogames..."><button id="nao_gosto">adicionar</button></p>
+      </div>
+      <div id="info_extra">
+        <h3>Redes Sociais (opcional)</h3>
+        <label for="insta">Instagram: <input type="text" name="insta" id="insta" placeholder="Ex: @nome_1"></label>
+        <label for="facebook">Facebook: <input type="text" name="facebook" id="facebook" placeholder="facebook.com/nome"></label>
+        <label for="outra_rede">Outra: <input type="text" placeholder="Https://blabla.com/@123">
+      </div>
+      <button>Editar perfil</button>
+      <button>Cancelar</button>
+    </div>
+  </section>
+</body>
+</html>
