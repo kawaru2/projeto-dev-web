@@ -71,7 +71,7 @@
     display: none;
   }
 
-  #menu_burguer {
+  .menu_burguer {
     display: flex;
     width: 60px;
     flex-direction: column;
@@ -87,7 +87,7 @@
 }
 
 @media (max-width: 425px) {
-  #menu_burguer {
+  .menu_burguer {
     width: 40px;
     gap: 8px;
     margin: 0;
@@ -137,6 +137,6 @@
   }
 }
 
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
 
-}
+} */
