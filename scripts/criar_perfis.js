@@ -1,7 +1,6 @@
-export let profiles = []
-let dataBaseProfiles = JSON.parse(localStorage.getItem('Usuários'))
-
 // FUNÇÃO PARA ARMAZENAR EM UM ARRAY OS DADOS ENVIADOS PELO USUÁRIO.
+
+let usuarios = JSON.parse(localStorage.getItem('Usuários')) || []
 
 function data() {
   const newProfile = {
@@ -14,65 +13,73 @@ function data() {
     redes: []
   }
 
-  profiles.push(newProfile)
-  localStorage.setItem('Usuários', JSON.stringify(profiles))
-  alert(`Olá, ${newProfile.nome}. Seu perfil foi criado com sucesso! `)
+  usuarios.push(newProfile)
+
+  localStorage.setItem('Usuários', JSON.stringify(usuarios))
+
+  alert(`Olá, ${newProfile.nome}. Seu perfil foi criado com sucesso!`)
 }
 
 // FUNÇÃO PARA ADICIONAR OS CARTÕES NA TAG LISTA DO DOM.
 
-const listProfiles = document.querySelector('.perfis_pri')
+// let dataBaseProfiles = JSON.parse(localStorage.getItem('Usuários'))
 
-export let functionMain = profiles.forEach((card, index) => {
+// if (!Array.isArray(dataBaseProfiles)) {
+//   dataBaseProfiles = []
+// }
 
-  let id
+// const listProfiles = document.querySelector('.perfis_pri')
 
-  const profile = document.createElement('li')
+// dataBaseProfiles.forEach((card) => {
 
-  profile.classList.add('opcao_perf_pri')
+//   let id
 
-  if (card.genero == 'masculino') {
+//   const profile = document.createElement('li')
 
-    id = 'Ele/Dele'
+//   profile.classList.add('opcao_perf_pri')
 
-  } else if (card.genero == 'feminino') {
+//   if (card.genero == 'masculino') {
 
-    id = 'Ela/Dela'
+//     id = 'Ele/Dele'
 
-  } else if (card.genero == 'outro') {
+//   } else if (card.genero == 'feminino') {
 
-    id = '?/?'
+//     id = 'Ela/Dela'
 
-  } else {
+//   } else if (card.genero == 'outro') {
 
-    console.log('genero não identificado')
+//     id = '?/?'
 
-  }
+//   } else {
 
-  profile.innerHTML = `
-  <div class="cartao_inicio_pri">
-      <img src="" class="foto_usuario">
-      <p class="nome">${card.nome}</p> 
-     </div>
-     <div class="pronomes_e_idades">
-      <p>${id}</p>
-      <p>${card.idade}</p>
-     </div>
-     <div class="linha"></div>
-     <p class="hobby">Hobby:<span class="resposta_hobby">${card.hobby}</span></p>
-     <ul class="lista_dados_perfil">
-      <li class="opcao_lista_dados_perfil">
-       <p class="gostos_e_desgostos">Gosto de:</p>
-       <p class="preferencias">Vôlei, Futebol, ciclismo, Séries, Filmes, Academia.</p>
-      </li>
-      <li class="opcao_lista_dados_perfil">
-       <p class="gostos_e_desgostos">Não gosta de:</p>
-       <p class="preferencias">ficar em casa, Festa, gente chata</p>
-      </li>
-     </ul>
-     `
-     listProfiles.appendChild(card)
-})
+//     console.log('genero não identificado')
+
+//   }
+
+//   profile.innerHTML = `
+//   <div class="cartao_inicio_pri">
+//       <img src="" class="foto_usuario">
+//       <p class="nome">${card.nome}</p> 
+//      </div>
+//      <div class="pronomes_e_idades">
+//       <p>${id}</p>
+//       <p>${card.idade}</p>
+//      </div>
+//      <div class="linha"></div>
+//      <p class="hobby">Hobby:<span class="resposta_hobby">${card.hobby}</span></p>
+//      <ul class="lista_dados_perfil">
+//       <li class="opcao_lista_dados_perfil">
+//        <p class="gostos_e_desgostos">Gosto de:</p>
+//        <p class="preferencias">Vôlei, Futebol, ciclismo, Séries, Filmes, Academia.</p>
+//       </li>
+//       <li class="opcao_lista_dados_perfil">
+//        <p class="gostos_e_desgostos">Não gosta de:</p>
+//        <p class="preferencias">ficar em casa, Festa, gente chata</p>
+//       </li>
+//      </ul>
+//      `
+//      listProfiles.appendChild(profile)
+// })
 
 // CRIAR UM CARTÃO COM INFORMAÇÕES ENVIADAS PELO USUÁRIO. TAIS INFORMAÇÕES VIRÃO DE UM ARRAY.
 
