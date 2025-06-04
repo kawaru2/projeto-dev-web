@@ -8,18 +8,41 @@ function data() {
     hobby: document.querySelector('#hobbyCreate').value,
     idade: document.querySelector('#idade').value,
     genero: document.querySelector('input[name="sexo"]:checked').value,
-    gostos: [],
-    nao_gosto: [],
-    redes: []
+    gostos: document.querySelector('#gosto').value,
+    nao_gosto: document.querySelector('#nao_gosto').value,
+    redes: [document.querySelector('#insta').value, document.querySelector('#facebook').value, document.querySelector('#outra').value]
   }
 
   usuarios.push(newProfile)
 
   localStorage.setItem('Usuários', JSON.stringify(usuarios))
 
-  alert(`Olá, ${newProfile.nome}. Seu perfil foi criado com sucesso!`)
-}
+  const respostaPerfilCriado = document.querySelector('#dados_perfil')
 
+  // alert(`Olá, ${newProfile.nome}. Seu perfil foi criado com sucesso!`)
+  let searchMsgFinally = document.querySelector('.perfil_criado')
+
+  if (searchMsgFinally) {
+
+    searchMsgFinally.textContent = `Olá ${newProfile.nome}, seu perfil foi criado com sucesso. Volte para a página de perfil para visualizá-lo.`
+
+  } else {
+
+    let msgFinally = document.createElement('p')
+
+    msgFinally.classList.add('perfil_criado')
+
+    msgFinally.textContent = `Olá ${newProfile.nome}, seu perfil foi criado com sucesso. Você será redirecionado para a página de perfil automaticamente.`
+
+    respostaPerfilCriado.appendChild(msgFinally)
+
+  }
+
+  // setTimeout(() => {
+  //   window.location.href = './perfis.html'
+  // }, 4000)
+
+}
 // FUNÇÃO PARA ADICIONAR OS CARTÕES NA TAG LISTA DO DOM.
 
 // let dataBaseProfiles = JSON.parse(localStorage.getItem('Usuários'))

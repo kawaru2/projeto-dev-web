@@ -33,3 +33,19 @@
 #info_extra > h3 {
   margin-bottom: 20px;
 }
+
+/* RESPOSTA DA CRIAÇÃO DO PERFIL */
+
+.perfil_criado {
+  display: block;
+  width: 500px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: rgba(99, 99, 99, 0.4);
+  margin: 20px auto;
+  padding: 20px 10px;
+  color: var(--cor-fonte-outro);
+  border-radius: 10px;
+}

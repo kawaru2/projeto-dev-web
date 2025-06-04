@@ -99,3 +99,22 @@
   background-color: var(--cor-azul-escuro);
   transform: scale(1.1);
 }
+
+/* PARA USO DO HOVER, DIFERENCIANDO OS GENEROS */
+
+.feminino > div, .feminino > p > .resposta_hobby, .feminino > ul > li > .preferencias {
+  color: var(--cor-vermelho);
+}
+
+.feminino:hover {
+    box-shadow: 7px 7px 12px var(--cor-vermelho);
+}
+
+.outro > div, .outro > p > .resposta_hobby, .outro > ul > li > .preferencias {
+  color: var(--cor-fonte-outro);
+  /* text-shadow: 1px 1px 1px black; */
+}
+
+.outro:hover {
+    box-shadow: 7px 7px 12px var(--cor-fonte-outro);
+}

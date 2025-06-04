@@ -17,7 +17,7 @@
       <div id="sexo_ident">
         <label for="idade">Sua idade: <input type="number" name="idade" id="idade" placeholder="Ex: 23"></label>
         <h2>Sexo:</h2>
-        <input type="radio" name="sexo" id="masculino" value="masculino">
+        <input type="radio" name="sexo" id="masculino" value="masculino" checked>
         <label for="masculino">Masculino</label>
         <input type="radio" name="sexo" id="feminino" value="feminino">
         <label for="feminino">Feminino</label>
@@ -25,17 +25,17 @@
         <label for="outro">Outro</label>
       </div>
       <div id="informacoes">
-        <p>Gostos: <input type="text" name="gosto" id="gosto" placeholder="Festas, Praia, Esporte..."> <button id="gosto">adicionar</button></p>
-        <p>Não gosto: <input type="text" name="nao_gosto" id="nao_gosto" placeholder="Livros, Frio, Videogames..."><button id="nao_gosto">adicionar</button></p>
+        <p>Gostos: <input type="text" name="gosto" id="gosto" placeholder="Festas, Praia, Esporte..."></p>
+        <p>Não gosto: <input type="text" name="nao_gosto" id="nao_gosto" placeholder="Livros, Frio, Videogames..."></p>
       </div>
       <div id="info_extra">
         <h3>Redes Sociais (opcional)</h3>
         <label for="insta">Instagram: <input type="text" name="insta" id="insta" placeholder="Ex: @nome_1"></label>
         <label for="facebook">Facebook: <input type="text" name="facebook" id="facebook" placeholder="facebook.com/nome"></label>
-        <label for="outra_rede">Outra: <input type="text" placeholder="Https://blabla.com/@123">
+        <label for="outra_rede">Outra: <input type="text" id="outra" placeholder="Https://blabla.com/@123">
       </div>
       <button id="enviar" onclick="data()">Enviar perfil</button>
-      <button>Cancelar</button>
+      <button id="cancel" onclick="window.location.href = './perfis.html'">Cancelar</button>
     </div>
   </section>
   <script src="../scripts/criar_perfis.js"></script>
