@@ -63,6 +63,11 @@ dataBaseProfiles.forEach((card) => {
        <p class="preferencias">${card.nao_gosto}</p>
       </li>
      </ul>
+     <div Id="Redes-sociais">
+      <img src="" alt=""><a href="Https://www.Instagram.com/${card.redes[0]}" target="_blank">@${card.redes[0]}</a>
+      <img src="" alt=""><a href="Facebook.com/${card.redes[1]}">Facebook.com/${card.redes[1]}</a>
+      <img src="" alt=""><a href="${card.redes[2]}">${card.redes[2]}</a>
+     </div>
      `
      listProfiles.appendChild(profile)
 })
