@@ -3,7 +3,7 @@
 
 let usuarios = JSON.parse(localStorage.getItem('Usuários')) || []
 
-function data() {
+function data() { // ESSA FUNÇÃO FICOU MUITO GRANDE, ELA PODE SER QUEBRADA EM VÁRIAS PARTES E ESSAS PARTES PODEM SER CHAMADAS QUANDO A FUNÇÃO PRINCIPAL FOR CHAMADA NO DOM.
 
   // O IDEAL ERA TER CRIADO VARIÁVEIS PARA CADA CAMPO DO OBJETO.
   
@@ -14,7 +14,13 @@ function data() {
     genero: document.querySelector('input[name="sexo"]:checked').value,
     gostos: document.querySelector('#gosto').value.trim(),
     nao_gosto: document.querySelector('#nao_gosto').value.trim(),
-    redes: [document.querySelector('#insta').value, document.querySelector('#facebook').value, document.querySelector('#outra').value],
+    redes: [
+      document.querySelector('#insta').value,
+      
+      document.querySelector('#facebook').value,
+      
+      document.querySelector('#outra').value],
+    
     senha: document.querySelector('.yourSenha')
   }
 
@@ -97,15 +103,15 @@ function data() {
   // MANIPULAÇÃO DAS STRINGS DE GOSTOS E NÃO GOSTOS
 
   newProfile.gostos = newProfile.gostos
-  .split(' ')
+  .split(/[, ]+/)
   .filter(item => item !== '')
-  .map( word => word[0].toUpperCase() + word.slice(1).toLowerCase())
+  .map(word => word[0].toUpperCase() + word.slice(1).toLowerCase())
   .join('; ')
 
   newProfile.nao_gosto = newProfile.nao_gosto
-  .split(' ')
+  .split(/[, ]+/)
   .filter(item => item !== '')
-  .map( word => word[0].toUpperCase() + word.slice(1).toLowerCase())
+  .map(word => word[0].toUpperCase() + word.slice(1).toLowerCase())
   .join('; ')
 
   usuarios.push(newProfile)
@@ -129,6 +135,8 @@ function data() {
     msgFinally.textContent = `Olá ${newProfile.nome}, seu perfil foi criado com sucesso. Você será redirecionado para a página de perfil automaticamente. Seu ID é ${yourId}.`
 
     respostaPerfilCriado.appendChild(msgFinally)
+
+    msgFinally.focus() // NÃO SEI SE VAI DAR CERTO MAS A IDEIA É QUE O USUÁRIO FOQUE NESSA ÁREA POR CONTA DE SUA SENHA.
 
   }
 

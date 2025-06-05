@@ -43,17 +43,17 @@ dataBaseProfiles.forEach((card) => {
   // O DATABASEPROFILES ME RETORNA TODOS OS PERFIS DO ARRAY. JÁ O CARD DO FOREACH() ME RETORNA SOMENTE O ITEM DO ARRAY ATUAL.
 
   profile.innerHTML = `
-  <div class="cartao_inicio_pri">
+    <div class="cartao_inicio_pri">
       <img src="" class="foto_usuario">
       <p class="nome">${card.nome}</p> 
-     </div>
-     <div class="pronomes_e_idades">
+    </div>
+    <div class="pronomes_e_idades">
       <p>${id}</p>
       <p>${card.idade} anos</p>
-     </div>
-     <div class="linha"></div>
-     <p class="hobby">Hobby:<span class="resposta_hobby">${card.hobby}</span></p>
-     <ul class="lista_dados_perfil">
+    </div>
+    <div class="linha"></div>
+    <p class="hobby">Hobby:<span class="resposta_hobby">${card.hobby}</span></p>
+    <ul class="lista_dados_perfil">
       <li class="opcao_lista_dados_perfil">
        <p class="gostos_e_desgostos">Gosto de:</p>
        <p class="preferencias">${card.gostos}</p>
@@ -62,12 +62,60 @@ dataBaseProfiles.forEach((card) => {
        <p class="gostos_e_desgostos">Não gosta de:</p>
        <p class="preferencias">${card.nao_gosto}</p>
       </li>
-     </ul>
-     <div Id="Redes-sociais">
+    </ul>
+    <div Id="Redes-sociais">
       <img src="" alt=""><a href="Https://www.Instagram.com/${card.redes[0]}" target="_blank">@${card.redes[0]}</a>
       <img src="" alt=""><a href="Facebook.com/${card.redes[1]}">Facebook.com/${card.redes[1]}</a>
       <img src="" alt=""><a href="${card.redes[2]}">${card.redes[2]}</a>
-     </div>
-     `
+    </div>
+      `
      listProfiles.appendChild(profile)
 })
+
+/*
+
+  PRECISO REVISAR ESSE CÓDIGO INFORMADO PELO COPILOT.
+
+  A FUNÇÃO DO CÓDIGO É ALTERAR O INNERHTML ACIMA PARA QUE ELE NÃO ENVIE OS LINKS CASO O USUÁRIO NÃO INFORME SUAS REDES, EVITANDO ENVIAR PARA O PERFIL.
+
+  OBS: DEVE SER APLICADO APÓS O INNERHTML E ANTES DO APPENDCHILD
+
+  APAGAR:
+
+  <div Id="Redes-sociais">
+  <img src="" alt=""><a href="Https://www.Instagram.com/${card.redes[0]}" target="_blank">@${card.redes[0]}</a>
+  <img src="" alt=""><a href="Facebook.com/${card.redes[1]}">Facebook.com/${card.redes[1]}</a>
+  <img src="" alt=""><a href="${card.redes[2]}">${card.redes[2]}</a>
+</div>
+
+ADICIONAR:
+
+const redesContainer = profile.querySelector('#Redes-sociais');
+redesContainer.innerHTML = ''; // Limpa o conteúdo original
+
+const redes = card.redes || [];
+
+const redesInfo = [
+  { nome: 'Instagram', baseUrl: 'https://www.instagram.com/', icon: 'instagram-icon.png' },
+  { nome: 'Facebook', baseUrl: 'https://www.facebook.com/', icon: 'facebook-icon.png' },
+  { nome: 'Outro', baseUrl: '', icon: 'link-icon.png' }
+];
+
+redes.forEach((valor, index) => {
+  if (valor && valor.trim() !== '') {
+    const img = document.createElement('img');
+    img.src = redesInfo[index].icon;
+    img.alt = redesInfo[index].nome;
+
+    const a = document.createElement('a');
+    const isFullLink = valor.startsWith('http');
+    a.href = isFullLink ? valor : redesInfo[index].baseUrl + valor;
+    a.target = '_blank';
+    a.textContent = isFullLink ? valor : `@${valor}`;
+
+    redesContainer.appendChild(img);
+    redesContainer.appendChild(a);
+  }
+});
+
+*/
