@@ -63,13 +63,34 @@ dataBaseProfiles.forEach((card) => {
        <p class="preferencias">${card.nao_gosto}</p>
       </li>
     </ul>
-    <div Id="Redes-sociais">
-      <img src="" alt=""><a href="Https://www.Instagram.com/${card.redes[0]}" target="_blank">@${card.redes[0]}</a>
-      <img src="" alt=""><a href="Facebook.com/${card.redes[1]}">Facebook.com/${card.redes[1]}</a>
-      <img src="" alt=""><a href="${card.redes[2]}">${card.redes[2]}</a>
-    </div>
+    <div Id="Redes-sociais"></div>
       `
-     listProfiles.appendChild(profile)
+      const redesInfo = [
+        { nome: 'Instagram', url: 'https://instagram.com/', icone: '../images/instagram-icone.svg' },
+        { nome: 'Facebook', url: 'https://Facebook.com/', icone: '../images/facebook-icone.svg' }, // O RESTANTE DA URL SERÁ INFORMADA PELO USUÁRIO, OU SEJA, O USER DELE DA REDE SOCIAL.
+        { nome: 'Outro_link', url: '', icone: '../images/link-icone.svg' } // A URL SERÁ INFORMADA NO CAMPO DE CADASTRO DO USUÁRIO.
+      ]
+
+      listProfiles.appendChild(profile)
+
+      const socialMedia = document.querySelector('#Redes-sociais')
+
+      card.redes.forEach((info, index) => { // INFO = REDES SOCIAIS DO USUÁRIO
+        if (info && info.trim() !== '') {
+          const img = document.createElement('img')
+          img.src = redesInfo[index].icone
+          img.alt = redesInfo[index].nome
+
+          const tagLink = document.createElement('a')
+          redesInfo[index].url ? tagLink.href = `${redesInfo[index].url}${info}` : tagLink.href = `${info}`
+          // tagLink.href = `${redesInfo[index].url}${info}`
+          tagLink.target = '_blank'
+          tagLink.textContent = info // SE EXISTIR A CHAVE COM O VALOR QUE COMECE COM HTTP, INSERE EM TEXTCONTENT, SE NÃO EXISTIR, INSERE @${INFO}.
+          tagLink.appendChild(img)
+          socialMedia.appendChild(tagLink)
+        }
+      })
+
 })
 
 /*
@@ -81,19 +102,13 @@ dataBaseProfiles.forEach((card) => {
   OBS: DEVE SER APLICADO APÓS O INNERHTML E ANTES DO APPENDCHILD
 
   APAGAR:
-
-  <div Id="Redes-sociais">
+<div Id="Redes-sociais">
   <img src="" alt=""><a href="Https://www.Instagram.com/${card.redes[0]}" target="_blank">@${card.redes[0]}</a>
   <img src="" alt=""><a href="Facebook.com/${card.redes[1]}">Facebook.com/${card.redes[1]}</a>
   <img src="" alt=""><a href="${card.redes[2]}">${card.redes[2]}</a>
 </div>
 
 ADICIONAR:
-
-const redesContainer = profile.querySelector('#Redes-sociais');
-redesContainer.innerHTML = ''; // Limpa o conteúdo original
-
-const redes = card.redes || [];
 
 const redesInfo = [
   { nome: 'Instagram', baseUrl: 'https://www.instagram.com/', icon: 'instagram-icon.png' },
