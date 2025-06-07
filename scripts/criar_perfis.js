@@ -21,7 +21,7 @@ function data() { // ESSA FUNÇÃO FICOU MUITO GRANDE, ELA PODE SER QUEBRADA EM 
       
       document.querySelector('#outra').value],
     
-    senha: document.querySelector('.yourSenha')
+    senha: document.querySelector('#id').value
   }
 
   // FUTURAMENTE EU PRECISO SUBSTITUIR ESSAS CONDICIONAIS PELA CONDICIONAL SWITCH PARA EVITAR MUITOS IF.

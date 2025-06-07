@@ -63,7 +63,7 @@ dataBaseProfiles.forEach((card) => {
        <p class="preferencias">${card.nao_gosto}</p>
       </li>
     </ul>
-    <div Id="Redes-sociais"></div>
+    <div class="redes-sociais"></div>
       `
       const redesInfo = [
         { nome: 'Instagram', url: 'https://instagram.com/', icone: '../images/instagram-icone.svg' },
@@ -73,7 +73,7 @@ dataBaseProfiles.forEach((card) => {
 
       listProfiles.appendChild(profile)
 
-      const socialMedia = document.querySelector('#Redes-sociais')
+      const socialMedia = profile.querySelector('.redes-sociais')
 
       card.redes.forEach((info, index) => { // INFO = REDES SOCIAIS DO USUÁRIO
         if (info && info.trim() !== '') {
@@ -83,9 +83,8 @@ dataBaseProfiles.forEach((card) => {
 
           const tagLink = document.createElement('a')
           redesInfo[index].url ? tagLink.href = `${redesInfo[index].url}${info}` : tagLink.href = `${info}`
-          // tagLink.href = `${redesInfo[index].url}${info}`
           tagLink.target = '_blank'
-          tagLink.textContent = info // SE EXISTIR A CHAVE COM O VALOR QUE COMECE COM HTTP, INSERE EM TEXTCONTENT, SE NÃO EXISTIR, INSERE @${INFO}.
+          tagLink.textContent = info
           tagLink.appendChild(img)
           socialMedia.appendChild(tagLink)
         }
