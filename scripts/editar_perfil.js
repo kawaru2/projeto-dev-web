@@ -2,8 +2,6 @@ const btnEdit = document.querySelector('#btn-edit')
 
 const btnDelete = document.querySelector('#btn-delete')
 
-const btnCancel = document.querySelector('#btn-cancel')
-
 const usuarios = JSON.parse(localStorage.getItem('Usuários')) || []
 
 btnEdit.addEventListener('click', () => {
@@ -112,8 +110,4 @@ btnDelete.addEventListener('click', () => {
     window.location.href = '/pages/perfis.html'
 
   }
-})
-
-btnCancel.addEventListener('click', () => {
-  window.location.href = '/perfis.html'
 })
