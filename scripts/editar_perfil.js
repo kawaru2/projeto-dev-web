@@ -115,5 +115,5 @@ btnDelete.addEventListener('click', () => {
 })
 
 btnCancel.addEventListener('click', () => {
-  window.location.href = '/pages/perfis.html'
+  window.location.href = '/perfis.html'
 })
