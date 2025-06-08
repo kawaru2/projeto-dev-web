@@ -1,8 +1,6 @@
 const menuBurguer = document.querySelector('.menu_burguer')
 
-menuBurguer.addEventListener('click', (e) => {
-
-  e.preventDefault()
+menuBurguer.addEventListener('click', () => {
 
   var menu = document.querySelector('.links_header')
   const menuBurguer = document.querySelector('.menu_burguer')
