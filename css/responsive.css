@@ -119,7 +119,8 @@
   }
 
   .opcaoListaPerfil {
-    min-width: 330px;
+    min-width: 100px;
+    width: 90%;
   }
 
   #apresentacao {
@@ -144,3 +145,180 @@
 /* @media (max-width: 375px) {
 
 } */
+
+/* PÁGINA PERFIS */
+
+/* 425PX */
+
+@media (max-width: 425px) {
+
+  #titulo_lista {
+    width: 90%;
+  }
+
+  .opcao_perf_pri {
+    min-width: 300px;
+    max-width: none;
+    width: 90%;
+  }
+
+  .nome {
+    width: 40%;
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 20px 30px;
+  }
+
+}
+
+/* PÁGINA AJUDA */
+
+/* 425PX */
+
+@media (max-width: 425px) {
+
+  .destaque_conteudo_principal {
+    width: 90%;
+    font-size: 1.5rem;
+    margin: 80px auto;
+  }
+
+  .subdestaque_conteudo_principal {
+    margin: 40px auto;
+    width: 90%;
+  }
+
+  #lista_perguntas {
+    width: 95%;
+    height: 500px;
+    text-indent: 0;
+  }
+
+  #contato_ajuda {
+    width: 90%;
+    margin: 100px auto 50px auto;
+  }
+
+  #nome_contato, #email_contato, #sua_pergunta {
+    margin-top: 20px;
+  }
+
+  #nome_contato, #email_contato {
+    height: 30px;
+  }
+
+  .btn {
+    padding: 20px 30px;
+    font-size: 1.2rem;
+  }
+
+}
+
+/* PÁGINA SOBRE */
+
+/* 425PX */
+
+@media (max-width: 425px) {
+
+  .sobre_site {
+    font-size: 1.8rem;
+  }
+
+  .informaçoes_do_trabalho {
+    width: 90%;
+    margin: 80px auto;
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+
+  #ferramentas {
+    flex-wrap: wrap;
+    width: 95%;
+  }
+
+  .tecnologias {
+    font-size: 1.5rem;
+  }
+
+  #prog_utili {
+    font-size: 1.5rem;
+  }
+
+  #prog_utili > li > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #lista_redes_sociais {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .opcao_lista_redes_sociais {
+    min-width: 50px;
+    padding: 0 10px;
+  }
+
+  .linhav {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+  }
+
+}
+
+/* PÁGINA CRIAR E EDITAR PERFIL */
+
+/* 425PX */
+
+@media (max-width: 425px) {
+
+  #secao_cadastro > h2 {
+    font-size: 1.8rem;
+  }
+
+  #dados_perfil {
+    width: 95%;
+    padding: 30px 20px;
+    margin-bottom: 60px;
+  }
+
+  #dados_perfil > label, #sexo_ident > h2, .labelConfig, #informacoes > p {
+    font-size: 1.2rem;
+  }
+
+  .inputCadastro {
+    width: 230px;
+    margin-top: 0;
+  }
+
+  #info_extra {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  #info_extra > h3 {
+    font-size: 1.5rem;
+  }
+
+  #id, #confirmacaoId {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  #section-btn {
+    flex-direction: column;
+    gap: 50px;
+    margin: 10px 0 20px 0;
+    align-items: center;
+  }
+
+  #btn-edit, #btn-cancel, #btn-delete {
+    width: 200px;
+  }
+
+}

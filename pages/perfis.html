@@ -6,10 +6,16 @@
     <title>Sala de Estarcio</title>
     <link rel="stylesheet" href="../css/SAstilo.css" type="text/css" media="all"/>
     <link rel="stylesheet" href="../css/perfis.css">
+    <link rel="stylesheet" href="../css/responsive.css">
  </head>
  <body>
    <header class="cabecalho">
       <nav id="lado direito">
+        <nav class="menu_burguer">
+          <div class="linha_burguer"></div>
+          <div class="linha_burguer"></div>
+          <div class="linha_burguer"></div>
+        </nav>
         <ul class="links_header">
           <li class="links_inicio"><a href="../index.html">Inicio</a></li>
           <li class="links_inicio"><a href="./perfis.html">Perfis</a></li>
@@ -22,7 +28,7 @@
         <h1 id="siglasDoSite">SE<br><span id="nome_site">SALA DE ESTÁRCIO</span></h1>
       </div>
     </header>
-  <main>
+  <main class="conteudo">
    <h2 id="titulo_lista">Lista de Perfis</h2>
    <ul class="perfis_pri"></ul>
    <div id="secao_btn">
@@ -42,6 +48,7 @@
    </nav>
    <p id="direitos_reservados">&copy; Sala de Estárcio Ltda. Todos os direitos reservados.</p>
   </footer>
-  <script type="module" src="../scripts/perfis.js"></script>
+  <script src="../scripts/responsive.js"></script>
+  <script src="../scripts/perfis.js"></script>
  </body>
 </html>
