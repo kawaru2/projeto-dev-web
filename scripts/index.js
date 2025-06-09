@@ -25,6 +25,8 @@ usuariosAleatorios.forEach((card) => {
 
   let id
 
+  let img
+
   const profile = document.createElement('li')
 
   profile.classList.add('opcaoListaPerfil')
@@ -33,15 +35,21 @@ usuariosAleatorios.forEach((card) => {
 
     id = 'Ele/Dele'
 
+    img = 'img-masculino.svg'
+
   } else if (card.genero == 'feminino') {
 
     id = 'Ela/Dela'
+
+    img = 'img-feminino.svg'
 
     profile.classList.add('feminino')
 
   } else if (card.genero == 'outro') {
 
     id = '?/?'
+
+    img = 'img-semid.svg'
 
     profile.classList.add('outro')
 
@@ -53,7 +61,7 @@ usuariosAleatorios.forEach((card) => {
 
   profile.innerHTML = `
     <div class="inicioCartao">
-      <img src="" class="foto_usuario">
+      <img src="./images/${img}" class="foto_usuario">
       <p class="nome">${card.nome}</p> 
     </div>
     <div class="pronomes_e_idades">

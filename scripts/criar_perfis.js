@@ -30,7 +30,7 @@ function data() { // ESSA FUNÇÃO FICOU MUITO GRANDE, ELA PODE SER QUEBRADA EM 
 
   if (newProfile.nome === '' || /\d/.test(newProfile.nome)) { // O /\d/ É UMA EXPRESSÃO REGULAR PARA VALIDAR SE A VARIÁVEL É UM NÚMERO, CASO SEJA, O CÓDIGO PARA A EXECUÇÃO.
 
-    alert('Números não são permitidos no campo "Nome". Por favor, reescreva seu nome.')
+    alert('Campo vazio ou números não são permitidos no campo "Nome". Por favor, reescreva seu nome.')
 
     return
 

@@ -119,13 +119,10 @@
 .link_rede_social > a {
     color: black;
     text-decoration: none;
+    align-self: center;
 }
 
 .link_rede_social > img {
-    width: 10px;
-    height: 10px;
-    border: 1px solid black;
-    border-radius: 2px;
-    background-color: blue;
-    align-self: center;
+    width: 30px;
+    height: 30px;
 }

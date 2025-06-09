@@ -214,6 +214,28 @@ body{
 
 }
 
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.redes-sociais > a {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.redes-sociais > a > img {
+    width: 30px;
+    height: 30px;
+}
+
 #rodape > nav {
     width: 35%;
     display: flex;

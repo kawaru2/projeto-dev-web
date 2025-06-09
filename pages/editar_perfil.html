@@ -6,38 +6,41 @@
   <title>Sala de Estárcio</title>
   <link rel="stylesheet" href="../css/SAstilo.css">
   <link rel="stylesheet" href="../css/criar_editar_perfil.css">
+  <link rel="stylesheet" href="../css/criar_editar_perfil2.css">
 </head>
 <body>
-  <h1 id="editar_perfil">Edite seu perfil</h1>
-  <section>
+  <h1 id="criar_perfil">Edite seu perfil</h1>
+  <section id="secao_cadastro">
     <h2>Dados e informações</h2>
     <div id="dados_perfil">
-      <label for="nameCreate">Nome: <input type="text" name="nameCreate" id="nameCreate" placeholder="Jorge Carvalho"></label>
-      <label for="hobbyCreate">Seu hobby: <input type="text" name="hobbyCreate" id="hobbyCreate" placeholder="Ex: Trilha"></label>
+      <label for="nameCreate">Nome: <input type="text" name="nameCreate" id="nameCreate" class="inputCadastro" placeholder="Jorge Carvalho"></label>
+      <label for="hobbyCreate">Seu hobby: <input type="text" name="hobbyCreate" id="hobbyCreate" class="inputCadastro" placeholder="Ex: Trilha"></label>
       <div id="sexo_ident">
-        <label for="idade">Sua idade: <input type="number" name="idade" id="idade" placeholder="Ex: 23"></label>
+        <label for="idade" class="labelConfig">Sua idade: <input type="number" name="idade" id="idade" class="inputCadastro" placeholder="Ex: 23"></label>
         <h2>Sexo:</h2>
         <input type="radio" name="sexo" id="masculino" value="masculino" checked>
-        <label for="masculino">Masculino</label>
+        <label for="masculino" class="labelConfig">Masculino</label>
         <input type="radio" name="sexo" id="feminino" value="feminino">
-        <label for="feminino">Feminino</label>
+        <label for="feminino" class="labelConfig">Feminino</label>
         <input type="radio" name="sexo" id="outro" value="outro">
-        <label for="outro">Outro</label>
+        <label for="outro" class="labelConfig">Outro</label>
       </div>
       <div id="informacoes">
-        <p>Gostos: <input type="text" name="gosto" id="gosto" placeholder="Festas, Praia, Esporte..."></p>
-        <p>Não gosto: <input type="text" name="nao_gosto" id="nao_gosto" placeholder="Livros, Frio, Videogames..."></p>
+        <p>Gostos: <input type="text" name="gosto" id="gosto" class="inputCadastro" placeholder="Festas, Praia, Esporte..."></p>
+        <p>Não gosto: <input type="text" name="nao_gosto" id="nao_gosto" class="inputCadastro" placeholder="Livros, Frio, Videogames..."></p>
       </div>
       <div id="info_extra">
         <h3>Redes Sociais (opcional)</h3>
-        <label for="insta">Instagram: <input type="text" name="insta" id="insta" placeholder="Ex: @nome_1"></label>
-        <label for="facebook">Facebook: <input type="text" name="facebook" id="facebook" placeholder="facebook.com/nome"></label>
-        <label for="outra_rede">Outra: <input type="text" id="outra" placeholder="Https://blabla.com/@123">
+        <label for="insta" class="labelConfig">Instagram: <input type="text" name="insta" id="insta" class="inputCadastro" placeholder="Ex: @nome_1"></label>
+        <label for="facebook" class="labelConfig">Facebook: <input type="text" name="facebook" id="facebook" class="inputCadastro" placeholder="facebook.com/nome"></label>
+        <label for="outra_rede" class="labelConfig">Outra: <input type="text" id="outra" class="inputCadastro" placeholder="Https://link.com/@123">
       </div>
-      <label for="id">Confirme sua senha para editar seu perfil: <input type="password" name="id" id="id"></label> <!-- SERÁ VALIDADA EM OUTRA PÁGINA FUTURAMENTE -->
-      <button id="btn-edit">Editar perfil</button>
-      <button id="btn-delete">Apagar perfil</button>
-      <button id="btn-cancel" onclick="window.location.href = './perfis.html'">Cancelar</button>
+      <label for="id">Confirme sua senha para editar seu perfil: <input type="password" name="id" id="id" class="inputCadastro"></label> <!-- SERÁ VALIDADA EM OUTRA PÁGINA FUTURAMENTE -->
+      <div id="section-btn">
+        <button id="btn-edit">Editar perfil</button>
+        <button id="btn-delete">Apagar perfil</button>
+        <button id="btn-cancel" onclick="window.location.href = './perfis.html'">Cancelar</button>
+      </div>
     </div>
   </section>
   <script src="/scripts/editar_perfil.js"></script>
